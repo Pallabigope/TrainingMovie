@@ -83,16 +83,8 @@ fun HomeScreen(movieView: MovieViewModel= hiltViewModel()) {
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp), // Adjust padding as needed
-          //  contentColor = Color.White, // Adjust content color as needed
-         //   backgroundColor = MaterialTheme.colorScheme.primary, // Adjust background color as needed
-         //   elevation = 4.dp
-        )
-
-    // backgroundColor = MaterialTheme.colorScheme.primary,
-           // contentColor = MaterialTheme.colorScheme.onPrimary,
-           // elevation = 4.dp
-
+                .padding(16.dp)
+            )
 
       MovieLists(moviesState) // Observe and display the movies
     }

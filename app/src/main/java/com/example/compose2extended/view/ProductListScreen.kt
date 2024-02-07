@@ -20,13 +20,6 @@ import com.example.compose2extended.navigation.BottomBarScreen
 import com.example.compose2extended.navigation.BottomNavGraph
 import com.example.compose2extended.viewmodel.UserViewModel
 
-/*
-import coil.annotation.ExperimentalCoilApi
-import coil.compose.rememberImagePainter
-import com.example.compose2extended.model.data.ProductX
-import com.example.compose2extended.viewmodel.ProductViewModel
-*/
-
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun ProductListScreen(navController: NavController,userViewModel: UserViewModel) {
@@ -97,63 +90,3 @@ fun RowScope.AddItem(
 }
 
 
-//    val products by productViewModel.productsState.collectAsState()
-//
-//    Column(
-//        modifier = Modifier
-//            .fillMaxSize()
-//            .padding(16.dp)
-//    ) {
-//        // Your other UI elements can go here
-//
-//        Spacer(modifier = Modifier.height(16.dp))
-//
-//        // Display list of products
-//        LazyColumn {
-//            items(products) { product ->
-//                ProductItem(product = product)
-//                Spacer(modifier = Modifier.height(16.dp))
-//            }
-//        }
-//    }
-//}
-//
-//@OptIn(ExperimentalCoilApi::class)
-//@Composable
-//fun ProductItem(product: ProductX) {
-//    Card(
-//        modifier = Modifier
-//            .fillMaxWidth()
-//            .height(200.dp),
-//        shape = MaterialTheme.shapes.medium
-//    ) {
-//        Row(
-//            modifier = Modifier
-//                .fillMaxSize()
-//                .padding(16.dp)
-//        ) {
-//            // Load product image
-//            Image(
-//                painter = rememberImagePainter(data = product.thumbnail),
-//                contentDescription = null,
-//                modifier = Modifier
-//                    .size(100.dp)
-//                    .clip(MaterialTheme.shapes.medium),
-//                contentScale = ContentScale.Crop
-//            )
-//
-//            Spacer(modifier = Modifier.width(16.dp))
-//
-//            // Display product details
-//            Column {
-//                Text(text = product.title, style = MaterialTheme.typography.headlineMedium)
-//                Spacer(modifier = Modifier.height(8.dp))
-//                Text(text = "$${product.price}", style = MaterialTheme.typography.headlineMedium)
-//                Spacer(modifier = Modifier.height(8.dp))
-//                Text(text = "${product.discountPercentage}% Off", style = MaterialTheme.typography.displayMedium)
-//                Spacer(modifier = Modifier.height(8.dp))
-//                Text(text = "Rating: ${product.rating}", style = MaterialTheme.typography.bodyMedium)
-//            }
-//        }
-//    }
-//}

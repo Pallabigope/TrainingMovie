@@ -38,11 +38,6 @@ class MainActivity : ComponentActivity() {
                         ProductListScreen(navController,userViewModel)
                     }
                 }
-               /* composable("product_list") {
-                    // Assuming ProductListScreen requires a ProductViewModel
-                    val productViewModel = viewModel<ProductViewModel>()
-                    ProductListScreen(productViewModel)
-                }*/
             }
 
         }

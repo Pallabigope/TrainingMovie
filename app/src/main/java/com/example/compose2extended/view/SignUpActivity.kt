@@ -60,7 +60,6 @@ class SignUpActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent{
            //content
-
         }
     }
 }

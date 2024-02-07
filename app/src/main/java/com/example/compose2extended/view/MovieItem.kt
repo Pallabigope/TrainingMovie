@@ -110,12 +110,6 @@ fun MovieItem(movie: MovieResult,
 
 
             )
-//        if (expanded){
-//            Text(
-//                text =movie.overview,
-//                style = MaterialTheme.typography.bodyMedium,
-//                modifier = Modifier.padding(top=8.dp))
-//        }
 
             if (dialogVisible) {
                 OverViewDialog(movie = movie, onClose = { dialogVisible = false })

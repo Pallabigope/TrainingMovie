@@ -78,10 +78,4 @@ fun ProfileScreen(userViewModel: UserViewModel,navController: NavHostController)
     }
 }
 
-/*
-@Composable
-@Preview
-fun ProfileScreenPreview() {
-    val userViewModel = remember { UserViewModel(application = Application()) }
-    ProfileScreen(userViewModel = userViewModel)
-}*/
+
