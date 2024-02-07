@@ -24,9 +24,4 @@ sealed class BottomBarScreen (
         icon = Icons.Default.Person
     )
 
-/*    object Cart : BottomBarScreen(
-        route = "cart",
-        title = "Cart",
-        icon = Icons.Default.ShoppingCart
-    )*/
 }

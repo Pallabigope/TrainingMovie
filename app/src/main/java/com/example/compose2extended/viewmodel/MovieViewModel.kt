@@ -3,7 +3,7 @@ package com.example.compose2extended.viewmodel
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.compose2extended.data.model.movieService
+import com.example.compose2extended.network.movieService
 import com.example.compose2extended.data.model.MovieMain
 import com.example.compose2extended.data.model.MovieResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -58,9 +58,6 @@ class MovieViewModel @Inject constructor(
         }
 
     }
-
-
-
 
 }
 

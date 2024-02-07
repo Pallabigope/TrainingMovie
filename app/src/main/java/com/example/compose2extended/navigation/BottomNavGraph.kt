@@ -20,8 +20,5 @@ fun BottomNavGraph(navController: NavHostController,userViewModel: UserViewModel
         composable(route = BottomBarScreen.Profile.route) {
             ProfileScreen(userViewModel = userViewModel, navController =navController )
         }
-       /* composable(route = BottomBarScreen.Cart.route) {
-            Cart()
-        }*/
     }
 }

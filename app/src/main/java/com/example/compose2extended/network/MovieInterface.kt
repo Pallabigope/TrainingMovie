@@ -1,9 +1,8 @@
-package com.example.compose2extended.data.model
+package com.example.compose2extended.network
 
+import com.example.compose2extended.data.model.MovieMain
 import retrofit2.Call
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import retrofit2.http.GET
 import retrofit2.http.Query
 import javax.inject.Inject
@@ -20,4 +19,4 @@ interface movieInterface {
 class movieService @Inject constructor(retrofit: Retrofit){
     val movieInstance: movieInterface = retrofit.create(movieInterface::class.java)
 
-}
+} 

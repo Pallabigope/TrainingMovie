@@ -1,7 +1,7 @@
 package com.example.compose2extended.di
 
-import com.example.compose2extended.data.model.base_url
-import com.example.compose2extended.data.model.movieInterface
+import com.example.compose2extended.network.base_url
+import com.example.compose2extended.network.movieInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
