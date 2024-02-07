@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.compose2extended.data.model.movieService
 import com.example.compose2extended.data.model.MovieMain
 import com.example.compose2extended.data.model.MovieResult
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -13,8 +14,12 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.lang.Exception
+import javax.inject.Inject
 
-class MovieViewModel: ViewModel() {
+@HiltViewModel
+class MovieViewModel @Inject constructor(
+    private val movieService: movieService
+): ViewModel() {
     private val _movies= MutableStateFlow<List<MovieResult>>(emptyList())  //This creates a private mutable state flow (_movies) initialized with an empty list of MovieResult. This flow will be used to hold the state of the movie data.
     var movies=_movies.asStateFlow()  //This creates a public read-only state flow (movies) by calling asStateFlow() on the mutable state flow _movies. This is the property that external components can observe for changes in the movie data.
     private val _isLoading = MutableStateFlow(false)

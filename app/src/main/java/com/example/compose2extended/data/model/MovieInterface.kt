@@ -3,8 +3,11 @@ package com.example.compose2extended.data.model
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import retrofit2.http.GET
 import retrofit2.http.Query
+import javax.inject.Inject
+import javax.inject.Singleton
 
 const val base_url="https://api.themoviedb.org/3/"
 interface movieInterface {
@@ -13,12 +16,8 @@ interface movieInterface {
     fun getMovies(@Query("api_key") apiKey: String): Call<MovieMain>
 }
 
-object movieService{
-    val movieInstance: movieInterface
+@Singleton
+class movieService @Inject constructor(retrofit: Retrofit){
+    val movieInstance: movieInterface = retrofit.create(movieInterface::class.java)
 
-    init {
-        val retro=
-            Retrofit.Builder().baseUrl(base_url).addConverterFactory(GsonConverterFactory.create()).build()
-        movieInstance =retro.create(movieInterface::class.java)
-    }
 }

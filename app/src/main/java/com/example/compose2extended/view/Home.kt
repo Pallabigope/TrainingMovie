@@ -28,6 +28,7 @@ import androidx.compose.ui.text.style.TextOverflow
 //import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.compose2extended.data.model.MovieResult
 import com.example.compose2extended.viewmodel.MovieViewModel
@@ -36,7 +37,7 @@ import com.example.compose2extended.viewmodel.MovieViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(movieView: MovieViewModel= viewModel()) {
+fun HomeScreen(movieView: MovieViewModel= hiltViewModel()) {
 
 
     LaunchedEffect(Unit) {

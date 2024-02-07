@@ -37,14 +37,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import androidx.hilt.navigation.compose.hiltViewModel
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import com.example.compose2extended.R
 import com.example.compose2extended.data.model.MovieResult
+import com.example.compose2extended.viewmodel.MovieViewModel
 
 @OptIn(ExperimentalCoilApi::class)
 @Composable
-fun MovieItem(movie: MovieResult) {
+fun MovieItem(movie: MovieResult,
+              movieViewModel: MovieViewModel = hiltViewModel()) {
     var expanded by remember { mutableStateOf(false) }
     var dialogVisible by remember { mutableStateOf(false) }
 
