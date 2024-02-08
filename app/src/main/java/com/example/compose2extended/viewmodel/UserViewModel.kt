@@ -45,21 +45,4 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
 
 
 
-    /*private val _productsState = MutableStateFlow<List<ProductX>>(emptyList())
-    val productsState: MutableStateFlow<List<ProductX>> = _productsState
-init{
-    fetchProducts()
-}
-    // Fetching data from the API using Retrofit and emit it as a Flow
-  private  fun fetchProducts() {
-        viewModelScope.launch {
-            try {
-                RetrofitInstance.productService.getProducts().collect { response ->
-                    _productsState.value = response.products
-                }
-            } catch (e: Exception) {
-                // Handle error
 
-            }
-        }
-    }*/
